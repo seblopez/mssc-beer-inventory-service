@@ -14,12 +14,13 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package guru.sfg.beer.inventory.service.repositories;
+package guru.springframework.beer.inventory.service.repositories;
 
-import guru.sfg.beer.inventory.service.domain.BeerInventory;
+import guru.springframework.beer.inventory.service.domain.BeerInventory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -28,4 +29,9 @@ import java.util.UUID;
 public interface BeerInventoryRepository extends JpaRepository<BeerInventory, UUID> {
 
     List<BeerInventory> findAllByBeerId(UUID beerId);
+
+    Optional<BeerInventory> findByBeerId(UUID beerId);
+
+    Optional<BeerInventory> findByUpc(String upc);
+
 }
