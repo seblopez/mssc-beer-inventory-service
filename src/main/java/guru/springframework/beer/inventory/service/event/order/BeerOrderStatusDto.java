@@ -14,26 +14,10 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package guru.springframework.beer.inventory.service.repositories;
 
-import guru.springframework.beer.inventory.service.domain.BeerInventory;
-import org.springframework.data.jpa.repository.JpaRepository;
+package guru.springframework.beer.inventory.service.event.order;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
-
-/**
- * Created by jt on 2019-01-26.
- */
-public interface BeerInventoryRepository extends JpaRepository<BeerInventory, UUID> {
-
-    List<BeerInventory> findAllByBeerId(UUID beerId);
-
-    List<BeerInventory> findAllByUpc(String upc);
-
-    Optional<BeerInventory> findByBeerId(UUID beerId);
-
-    Optional<BeerInventory> findByUpc(String upc);
-
+public enum BeerOrderStatusDto {
+    NEW, VALIDATED, VALIDATION_PENDING, VALIDATION_EXCEPTION, ALLOCATED, ALLOCATION_PENDING, ALLOCATION_EXCEPTION, PENDING_INVENTORY, PICKED_UP,
+    DELIVERED, DELIVERY_EXCEPTION
 }
