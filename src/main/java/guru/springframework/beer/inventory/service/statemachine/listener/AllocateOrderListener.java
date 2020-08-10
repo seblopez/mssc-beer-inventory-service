@@ -1,10 +1,10 @@
-package guru.springframework.beer.inventory.service.listener;
+package guru.springframework.beer.inventory.service.statemachine.listener;
 
 import guru.springframework.beer.inventory.service.config.JmsConfig;
-import guru.springframework.beer.inventory.service.event.allocation.AllocateOrderRequest;
-import guru.springframework.beer.inventory.service.event.allocation.AllocateOrderResponse;
-import guru.springframework.beer.inventory.service.event.order.BeerOrderDto;
 import guru.springframework.beer.inventory.service.services.AllocationService;
+import guru.springframework.beer.inventory.service.statemachine.event.allocation.AllocateOrderRequest;
+import guru.springframework.beer.inventory.service.statemachine.event.allocation.AllocateOrderResponse;
+import guru.springframework.beer.inventory.service.statemachine.event.order.BeerOrderDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;

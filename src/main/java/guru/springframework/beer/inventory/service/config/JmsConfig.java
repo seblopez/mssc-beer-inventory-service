@@ -1,12 +1,12 @@
 package guru.springframework.beer.inventory.service.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import guru.springframework.beer.inventory.service.event.NewInventoryEvent;
-import guru.springframework.beer.inventory.service.event.allocation.AllocateOrderRequest;
-import guru.springframework.beer.inventory.service.event.allocation.AllocateOrderResponse;
-import guru.springframework.beer.inventory.service.event.order.BeerOrderDto;
-import guru.springframework.beer.inventory.service.event.order.BeerOrderLineDto;
-import guru.springframework.beer.inventory.service.event.order.BeerOrderStatusDto;
+import guru.springframework.beer.inventory.service.statemachine.event.NewInventoryEvent;
+import guru.springframework.beer.inventory.service.statemachine.event.allocation.AllocateOrderRequest;
+import guru.springframework.beer.inventory.service.statemachine.event.allocation.AllocateOrderResponse;
+import guru.springframework.beer.inventory.service.statemachine.event.order.BeerOrderDto;
+import guru.springframework.beer.inventory.service.statemachine.event.order.BeerOrderLineDto;
+import guru.springframework.beer.inventory.service.statemachine.event.order.BeerOrderStatusDto;
 import guru.springframework.beer.inventory.service.web.model.BeerDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

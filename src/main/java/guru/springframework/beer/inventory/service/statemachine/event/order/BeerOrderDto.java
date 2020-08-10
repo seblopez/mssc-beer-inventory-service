@@ -15,9 +15,9 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package guru.springframework.beer.inventory.service.event.order;
+package guru.springframework.beer.inventory.service.statemachine.event.order;
 
-import guru.springframework.beer.inventory.service.event.BaseItem;
+import guru.springframework.beer.inventory.service.statemachine.event.BaseItem;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

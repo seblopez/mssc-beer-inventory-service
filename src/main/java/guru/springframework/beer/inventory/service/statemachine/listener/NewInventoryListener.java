@@ -1,9 +1,9 @@
-package guru.springframework.beer.inventory.service.listener;
+package guru.springframework.beer.inventory.service.statemachine.listener;
 
 import guru.springframework.beer.inventory.service.config.JmsConfig;
 import guru.springframework.beer.inventory.service.domain.BeerInventory;
-import guru.springframework.beer.inventory.service.event.NewInventoryEvent;
 import guru.springframework.beer.inventory.service.repositories.BeerInventoryRepository;
+import guru.springframework.beer.inventory.service.statemachine.event.NewInventoryEvent;
 import guru.springframework.beer.inventory.service.web.mappers.BeerInventoryMapper;
 import guru.springframework.beer.inventory.service.web.model.BeerDto;
 import lombok.RequiredArgsConstructor;

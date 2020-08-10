@@ -1,6 +1,6 @@
-package guru.springframework.beer.inventory.service.event.allocation;
+package guru.springframework.beer.inventory.service.statemachine.event.allocation;
 
-import guru.springframework.beer.inventory.service.event.order.BeerOrderDto;
+import guru.springframework.beer.inventory.service.statemachine.event.order.BeerOrderDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

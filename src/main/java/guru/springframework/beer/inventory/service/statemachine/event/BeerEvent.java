@@ -1,4 +1,4 @@
-package guru.springframework.beer.inventory.service.event;
+package guru.springframework.beer.inventory.service.statemachine.event;
 
 import guru.springframework.beer.inventory.service.web.model.BeerDto;
 import lombok.AllArgsConstructor;

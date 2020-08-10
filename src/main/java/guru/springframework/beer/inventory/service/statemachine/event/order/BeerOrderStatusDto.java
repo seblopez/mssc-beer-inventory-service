@@ -15,7 +15,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package guru.springframework.beer.inventory.service.event.order;
+package guru.springframework.beer.inventory.service.statemachine.event.order;
 
 public enum BeerOrderStatusDto {
     NEW, VALIDATED, VALIDATION_PENDING, VALIDATION_EXCEPTION, ALLOCATED, ALLOCATION_PENDING, ALLOCATION_EXCEPTION, PENDING_INVENTORY, PICKED_UP,

@@ -1,9 +1,9 @@
 package guru.springframework.beer.inventory.service.services;
 
 import guru.springframework.beer.inventory.service.domain.BeerInventory;
-import guru.springframework.beer.inventory.service.event.order.BeerOrderDto;
-import guru.springframework.beer.inventory.service.event.order.BeerOrderLineDto;
 import guru.springframework.beer.inventory.service.repositories.BeerInventoryRepository;
+import guru.springframework.beer.inventory.service.statemachine.event.order.BeerOrderDto;
+import guru.springframework.beer.inventory.service.statemachine.event.order.BeerOrderLineDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
