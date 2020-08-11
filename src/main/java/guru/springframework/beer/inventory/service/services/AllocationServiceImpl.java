@@ -8,8 +8,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.text.MessageFormat;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -36,6 +38,26 @@ public class AllocationServiceImpl implements AllocationService {
         log.debug("Total Ordered: " + totalOrdered.get() + " Total Allocated: " + totalAllocated.get());
 
         return totalOrdered.get() == totalAllocated.get();
+
+    }
+
+    @Override
+    public void deallocateOrder(BeerOrderDto beerOrderDto) {
+        final List<BeerInventory> newBeerInventory = beerOrderDto.getBeerOrderLines()
+                .stream()
+                .map(orderLine -> {
+                    log.debug(MessageFormat.format("Adding these new inventory entries upc {0}, qty {1}"
+                            , orderLine.getUpc(), orderLine.getQuantityAllocated()));
+
+                    return BeerInventory.builder()
+                            .beerId(orderLine.getBeerId())
+                            .upc(orderLine.getUpc())
+                            .quantityOnHand(orderLine.getQuantityAllocated())
+                            .build();
+
+                }).collect(Collectors.toList());
+
+        beerInventoryRepository.saveAll(newBeerInventory);
 
     }
 

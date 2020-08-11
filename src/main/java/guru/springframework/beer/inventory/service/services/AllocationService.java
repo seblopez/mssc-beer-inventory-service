@@ -4,4 +4,7 @@ import guru.springframework.beer.inventory.service.statemachine.event.order.Beer
 
 public interface AllocationService {
     Boolean allocateOrder(BeerOrderDto beerOrderDto);
+
+    void deallocateOrder(BeerOrderDto beerOrderDto);
+
 }
