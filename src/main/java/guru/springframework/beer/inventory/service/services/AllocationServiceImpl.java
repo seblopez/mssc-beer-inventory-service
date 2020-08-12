@@ -37,7 +37,7 @@ public class AllocationServiceImpl implements AllocationService {
 
         log.debug("Total Ordered: " + totalOrdered.get() + " Total Allocated: " + totalAllocated.get());
 
-        return totalOrdered.get() == totalAllocated.get();
+        return totalOrdered.get() != totalAllocated.get();
 
     }
 

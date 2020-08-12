@@ -26,6 +26,7 @@ public class AllocateOrderListener {
 
         try {
             final Boolean orderAllocated = allocationService.allocateOrder(beerOrderDto);
+
             jmsTemplate.convertAndSend(JmsConfig.ALLOCATE_ORDER_RESPONSE_QUEUE,
                     AllocateOrderResponse.builder()
                             .beerOrderDto(beerOrderDto)
